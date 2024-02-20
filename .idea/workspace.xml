@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="" />
+    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Datasource.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2cT3ekKMAnBF5jn9u9ppi34V3yY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matty/Downloads/sqlite-jdbc-3.41.0.0.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Music_Section25Databases" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -30,6 +66,34 @@
       <option name="presentableId" value="Default" />
       <updated>1708121839284</updated>
     </task>
+    <task id="LOCAL-00001" summary="Section 25.434(Databases: The Music SQLite Database): Completing the lecture">
+      <created>1708126583250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708126583250</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Section 25.435(Databases: Write Java Query for Artists): completing lecture; created table classes in 'model package', implemented 'datasource.queryArtist()' to allow Main ease of access to data">
+      <created>1708137494207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708137494207</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter">
+      <created>1708159802264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708159802264</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Section 25.434(Databases: The Music SQLite Database): Completing the lecture" />
+    <MESSAGE value="Section 25.435(Databases: Write Java Query for Artists): completing lecture; created table classes in 'model package', implemented 'datasource.queryArtist()' to allow Main ease of access to data" />
+    <MESSAGE value="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter" />
   </component>
 </project>
