@@ -44,6 +44,11 @@ public class Datasource {
     public static final String QUERY_ALBUMS_BY_ARTIST_SORT =
             " ORDER BY " + TABLE_ALBUMS + "." + COLUMN_ARTIST_NAME + " COLLATE NOCASE ";
 
+    public static final String QUERY_ARTISTS_START =
+            "SELECT * FROM " + TABLE_ARTISTS;
+    public static final String QUERY_ARTISTS_SORT =
+            " ORDER BY " + COLUMN_ARTIST_NAME + " COLLATE NOCASE ";
+
     private Connection conn;
 
     public boolean open() {
@@ -68,12 +73,11 @@ public class Datasource {
 
     public List<Artist> queryArtists(int sortOrder) {
 
-        StringBuilder sb = new StringBuilder("SELECT * FROM ");
-        sb.append(TABLE_ARTISTS);
+        StringBuilder sb = new StringBuilder(QUERY_ARTISTS_START);
         if (sortOrder != ORDER_BY_NONE) {
-            sb.append(" ORDER BY ");
-            sb.append(COLUMN_ARTIST_NAME);
-            sb.append(" COLLATE NOCASE ");
+            sb.append(QUERY_ARTISTS_SORT);
+//            sb.append(COLUMN_ARTIST_NAME);
+//            sb.append(" COLLATE NOCASE ");
             if(sortOrder == ORDER_BY_DESC) {
                 sb.append("DESC");
             } else {
