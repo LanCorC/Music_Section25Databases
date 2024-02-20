@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter">
+    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.436(Databases: Executing SQL in DB Browser): introduced ColumnIndex in ResultSet, query strings for more query options. in this case, sorting.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Datasource.java" afterDir="false" />
@@ -87,13 +87,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708159802264</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Section 25.436(Databases: Executing SQL in DB Browser): introduced ColumnIndex in ResultSet, query strings for more query options. in this case, sorting.">
+      <created>1708390430251</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708390430252</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Section 25.434(Databases: The Music SQLite Database): Completing the lecture" />
     <MESSAGE value="Section 25.435(Databases: Write Java Query for Artists): completing lecture; created table classes in 'model package', implemented 'datasource.queryArtist()' to allow Main ease of access to data" />
     <MESSAGE value="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Section 25.436(Databases: Executing SQL in DB Browser): part way into lecture. making use of integrating COLUMN_INDEX instead of COLUMN_NAME for ResultSet's getter" />
+    <MESSAGE value="Section 25.436(Databases: Executing SQL in DB Browser): introduced ColumnIndex in ResultSet, query strings for more query options. in this case, sorting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Section 25.436(Databases: Executing SQL in DB Browser): introduced ColumnIndex in ResultSet, query strings for more query options. in this case, sorting." />
   </component>
 </project>
