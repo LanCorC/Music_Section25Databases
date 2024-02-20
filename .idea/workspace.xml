@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.437(Databases: Query Albums by Artist Method): implementing constrant strings for the earlier QueryArtists method">
-      <change afterPath="$PROJECT_DIR$/src/model/SongArtist.java" afterDir="false" />
+    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Datasource.java" afterDir="false" />
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708397657564</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query">
+      <created>1708399652473</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708399652473</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -119,6 +125,7 @@
     <MESSAGE value="Section 25.436(Databases: Executing SQL in DB Browser): introduced ColumnIndex in ResultSet, query strings for more query options. in this case, sorting." />
     <MESSAGE value="Section 25.437(Databases: Query Albums by Artist Method): creating string constants to make query codeblocks concise" />
     <MESSAGE value="Section 25.437(Databases: Query Albums by Artist Method): implementing constrant strings for the earlier QueryArtists method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Section 25.437(Databases: Query Albums by Artist Method): implementing constrant strings for the earlier QueryArtists method" />
+    <MESSAGE value="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query" />
   </component>
 </project>
