@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music.db" beforeDir="false" afterPath="$PROJECT_DIR$/music.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Datasource.java" afterDir="false" />
     </list>

@@ -6,7 +6,8 @@ import java.util.List;
 
 public class Datasource {
     public static final String DB_NAME = "music.db";
-    public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Users\\Matty\\IdeaProjects\\Music_Section25Databases\\" + DB_NAME;
+    public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Users\\lance\\Documents\\CodingJava\\Music_Section25Databases\\" + DB_NAME;
+    //"jdbc:sqlite:C:\\Users\\lance\\Documents\\CodingJava\\TestDB_Section25Databases\\testjava.db"
 //    public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Users\\Matty\\IdeaProjects\\Music_Section25Databases\\" + DB_NAME;
     public static final String TABLE_ALBUMS = "albums";
     public static final String COLUMN_ALBUM_ID = "_id";
@@ -35,6 +36,21 @@ public class Datasource {
     public static final int ORDER_BY_NONE = 1;
     public static final int ORDER_BY_ASC = 2;
     public static final int ORDER_BY_DESC = 3;
+
+    public static final String TABLE_ARTIST_SONG_VIEW = "artist_list";
+    public static final String CREATE_ARTIST_FOR_SONG_VIEW = "CREATE VIEW IF NOT EXISTS " +
+            TABLE_ARTIST_SONG_VIEW + " AS SELECT " + TABLE_ARTISTS + "." + COLUMN_ARTIST_NAME + ", " +
+            TABLE_ALBUMS +"." + COLUMN_ALBUM_NAME + " AS " + COLUMN_SONG_ALBUM + ", " +
+            TABLE_SONGS + "." + COLUMN_SONG_TRACK + ", " + TABLE_SONGS+"." + COLUMN_SONG_TITLE +
+            " FROM " + TABLE_SONGS +
+            " INNER JOIN " + TABLE_ALBUMS + " ON " + TABLE_SONGS +
+            "." + COLUMN_SONG_ALBUM + " = " + TABLE_ALBUMS + "." + COLUMN_ALBUM_ID +
+            " INNER JOIN " + TABLE_ARTISTS + " ON " + TABLE_ALBUMS + "." + COLUMN_ALBUM_ARTIST +
+            " = " + TABLE_ARTISTS + "." + COLUMN_ARTIST_ID +
+            " ORDER BY " +
+            TABLE_ARTISTS + "." + COLUMN_ARTIST_NAME + ", " +
+            TABLE_ALBUMS + "." + COLUMN_ALBUM_NAME + ", " +
+            TABLE_SONGS + "." + COLUMN_SONG_TRACK;
 
     public static final String QUERY_ALBUMS_BY_ARTIST_START =
             "SELECT " + TABLE_ALBUMS + "." + COLUMN_ALBUM_NAME + " FROM " + TABLE_ALBUMS +
@@ -224,6 +240,33 @@ public class Datasource {
             }
         } catch(SQLException e) {
             System.out.println("Error! = " + e.getMessage());
+        }
+    }
+
+    public int getCount(String table) {
+        String sql = "SELECT COUNT(*) AS count FROM " + table;
+        try(Statement statement = conn.createStatement();
+        ResultSet results = statement.executeQuery(sql)) {
+            int count = results.getInt("count");
+//            int min = results.getInt("min_id");
+
+            System.out.printf("Count = %d\n", count);
+            return count;
+        } catch(SQLException e) {
+            System.out.println("Query failed: " + e.getMessage());
+            return -1;
+        }
+    }
+
+    public boolean createViewForSongArtists() {
+        try(Statement statement = conn.createStatement()) {
+            statement.execute(CREATE_ARTIST_FOR_SONG_VIEW);
+//            System.out.println(CREATE_ARTIST_FOR_SONG_VIEW);
+            return true;
+
+        } catch(SQLException e) {
+            System.out.println("Create View failed: " + e.getMessage());
+            return false;
         }
     }
 }
