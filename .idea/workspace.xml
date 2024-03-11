@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query">
+    <list default="true" id="1cfb6ccd-ea80-4d6b-b7fe-142eb1f4edfb" name="Changes" comment="Section 25.440(Databases: Functions and Views): created a quick method for returning count of items in a table, using &quot;AS nicknameHere&quot; to make code readable (use overloaded method, string input, instead of column index); created method for views (more of the same)- create string for the query,try with resources, execute,">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/music.db" beforeDir="false" afterPath="$PROJECT_DIR$/music.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music.db-journal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Datasource.java" afterDir="false" />
     </list>
@@ -116,8 +117,26 @@
       <option name="project" value="LOCAL" />
       <updated>1708399652473</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Section 25.440(Databases: Functions and Views): created a quick method for returning count of items in a table, using &quot;AS nicknameHere&quot; to make code readable (use overloaded method, string input, instead of column index); created method for views (more of the same)- create string for the query,try with resources, execute,">
+      <created>1709708833180</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709708833180</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Section 25.434(Databases: The Music SQLite Database): Completing the lecture" />
@@ -127,6 +146,7 @@
     <MESSAGE value="Section 25.437(Databases: Query Albums by Artist Method): creating string constants to make query codeblocks concise" />
     <MESSAGE value="Section 25.437(Databases: Query Albums by Artist Method): implementing constrant strings for the earlier QueryArtists method" />
     <MESSAGE value="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Section 25.438(Databases: Query Artists for Song method): tried out some sql executions in Db Browser, set up SongArtist class for next query type, set up string constants for next query" />
+    <MESSAGE value="Section 25.440(Databases: Functions and Views): created a quick method for returning count of items in a table, using &quot;AS nicknameHere&quot; to make code readable (use overloaded method, string input, instead of column index); created method for views (more of the same)- create string for the query,try with resources, execute," />
+    <option name="LAST_COMMIT_MESSAGE" value="Section 25.440(Databases: Functions and Views): created a quick method for returning count of items in a table, using &quot;AS nicknameHere&quot; to make code readable (use overloaded method, string input, instead of column index); created method for views (more of the same)- create string for the query,try with resources, execute," />
   </component>
 </project>
