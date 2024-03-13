@@ -52,6 +52,11 @@ public class Datasource {
             TABLE_ALBUMS + "." + COLUMN_ALBUM_NAME + ", " +
             TABLE_SONGS + "." + COLUMN_SONG_TRACK;
 
+    public static final String QUERY_VIEW_SONG_INFO_PREP = "SELECT " + COLUMN_ARTIST_NAME +
+            ", " + COLUMN_SONG_ALBUM + ", " + COLUMN_SONG_TRACK +" FROM " + TABLE_ARTIST_SONG_VIEW +
+            " WHERE " + COLUMN_SONG_TITLE + " = ?";
+    //SELECT name, album, track FROM artist_list WHERE title = ?
+
     public static final String QUERY_ALBUMS_BY_ARTIST_START =
             "SELECT " + TABLE_ALBUMS + "." + COLUMN_ALBUM_NAME + " FROM " + TABLE_ALBUMS +
                     " INNER JOIN " + TABLE_ARTISTS + " ON " + TABLE_ALBUMS + "." + COLUMN_ALBUM_ARTIST +
@@ -87,9 +92,13 @@ public class Datasource {
 
     private Connection conn;
 
+    private PreparedStatement querySongInfoView;
+
     public boolean open() {
         try {
             conn = DriverManager.getConnection(CONNECTION_STRING);
+            querySongInfoView = conn.prepareStatement(QUERY_VIEW_SONG_INFO_PREP);
+
             return true;
         } catch(SQLException e) {
             System.out.println("Couldn't connect to the database: " + e.getMessage());
@@ -99,6 +108,9 @@ public class Datasource {
 
     public void close() {
         try {
+            if(querySongInfoView != null) {
+                querySongInfoView.close();
+            }
             if(conn!=null) {
                 conn.close();
             }
@@ -276,14 +288,12 @@ public class Datasource {
 
     //SELECT name, album, track FROM artist_list WHERE title = "title"
     public List<SongArtist> querySongInfoView(String title) {
-        StringBuilder sb = new StringBuilder(QUERY_VIEW_SONG_INFO);
-        sb.append(title);
-        sb.append("\"");
 
-        System.out.println(sb.toString());
 
-        try (Statement statement = conn.createStatement();
-        ResultSet results = statement.executeQuery(sb.toString())) {
+        try {
+            querySongInfoView.setString(1, title);
+            ResultSet results = querySongInfoView.executeQuery();
+
             List<SongArtist> songArtists = new ArrayList<>();
             while(results.next()) {
                 SongArtist songArtist = new SongArtist();
@@ -297,5 +307,9 @@ public class Datasource {
             System.out.println("Query fail: " + e.getMessage());
             return null;
         }
+
+
+//        try (Statement statement = conn.createStatement();
+
     }
 }
