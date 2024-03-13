@@ -307,9 +307,5 @@ public class Datasource {
             System.out.println("Query fail: " + e.getMessage());
             return null;
         }
-
-
-//        try (Statement statement = conn.createStatement();
-
     }
 }
